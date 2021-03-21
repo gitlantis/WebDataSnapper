@@ -1,0 +1,49 @@
+USE [WeblancerDB]
+GO
+
+/****** Object:  Table [dbo].[DevtoCandidates]    Script Date: 22.03.2021 2:10:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DevtoCandidates](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[url] [nvarchar](1024) NOT NULL,
+ CONSTRAINT [PK_DevtoCandidates] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+
+
+USE [WeblancerDB]
+GO
+
+/****** Object:  Table [dbo].[WeblancerCandidates]    Script Date: 22.03.2021 2:11:17 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[WeblancerCandidates](
+	[url_id] [int] NOT NULL,
+	[cont_content] [text] NULL,
+	[phone] [nchar](50) NULL,
+	[e_mail] [nchar](100) NULL,
+	[login] [nvarchar](1024) NULL,
+ CONSTRAINT [PK_WeblancerCandidates] PRIMARY KEY CLUSTERED 
+(
+	[url_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
